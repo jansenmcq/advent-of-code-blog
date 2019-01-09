@@ -1,5 +1,5 @@
 const inputReader = require('./utilities/inputReaderUtility');
-const inputPath = '../input/1a.txt';
+const inputPath = 'input/1.txt';
 
 const input = inputReader.getNumbers(inputPath);
 

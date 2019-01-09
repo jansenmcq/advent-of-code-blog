@@ -36,4 +36,4 @@ Alternatively, I can use the Array prototype `.reduce()` function:
     }, 0);
 
 Then I simply log the result, copy from the terminal, and paste into the submit box! 
-A successful result brings us to part 2
+A successful result brings us to [part 2](https://jansenmcq.github.io/advent-of-code-blog/day1b)
