@@ -1,0 +1,12 @@
+## Day 2, part 2
+
+As far as I can tell, the only thing this has in common with part 1 is the input file. In part 1 we had to determine a quality about each word individually, now we have to compare words to each other. The operation of comparing one word to another takes place in `m` time, since the brief states that a word needs to be the same except for one character at the same place, so doing a brute force check would just iterate over the length of both words. However, this needs to happen between each word and every other word, which would take `n`<sup>`2`</sup> time, for a total time of `O(mn`<sup>`2`</sup>`)`.
+
+How can we optimise this? Well, I theory crafted for a while, and then I tried implementing my theories, and in the end I think I was too eager to optimize. This is a programming puzzle, after all, and not an interview question.
+
+I did come up with some ideas, sorting the list in place and then only ever comparing every element to its next element, but that was reliant on the mismatched letter bein near the back of the word, and my efforts to massage the sort algorithm bore no fruit.
+
+In considering the "intuitive approach", how my brain tries to solve the problem when given an example, I also thought of taking a "hashing" (mapping) approach, similar to the approach in part a. However, this still came with some caveats; if I use the first letter as a key in the map, that still runs the risk of having that letter be the one that is different. So I create two maps, each corresponding to a different position of letter in the word, to catch the above sitation. But then we run into the issue of there are multiple words that start with the same letter, so we end up having a collision on the key. This ends up still requiring mulltiple comparisons within a key, and with no guarantee of true randomness in the input, it probably doesn't optimize much over the brute force approach except in truly large inputs.
+Even then, it still uses 2N space, and the code for it ends up being much larger than the brute force approach.
+
+In the end, I tried all the approaches, and did some timing runs to see the results. With only 250 rows in the input, the total run time was less than 15 milliseconds for each program, with the hashing approach only saving a couple of milliseconds over the brute force. If I had to submit one approach for consideration, I would just do the n<sup>2</sup> brute force approach, since the code is cleaner.
