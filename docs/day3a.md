@@ -1,0 +1,7 @@
+## Day 3, part 1
+
+##### [Problem text](https://adventofcode.com/2018/day/3)
+I have not drilled down as hard on this one as I did the previous day's problem, mainly due to the fact that it seems pretty straightforward. There's a big grid with lots of rectangles to be placed on top of them. It should be a simple matter of iterating over each rectangle (m x o) and keeping track of the grid spaces that have been already claimed. This does get rather tedious, but it shouldn't be too bad. This is the first approach to try. On the grid, we keep track of how many claims overlap a given cell, and when the overlap changes from 1 to 2 we increment a counter. 
+One small optimization I did end up making was to reduce space complexity by not prepopulating a grid of 1000x1000, but instead create a map where the grid indices are keys. This saves allocated space, so we're only using that which claims are covering.
+
+Thoughts for future optimization (not going to try it right now): Maybe, instead of comparing each point on each claim to each point on the grid, we keep track of the claimed spots on the grid another way, like creating bounding boxes. This could allow us to see if any overlap would occur before iterating through all the points. Though we _would_ still need to somehow add the space of the new claim to the grid.
