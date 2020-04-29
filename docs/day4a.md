@@ -1,0 +1,4 @@
+## Day 4, part 1
+
+##### [Problem text](https://adventofcode.com/2018/day/4)
+Holy macaroni this is a beefy one. The majority of this task is just massaging data; I wanted to parse the input into data I could work with. I'm fine taking a couple extra passes over the input if it means more readable code. Even so, it was challenging keeping everything straight. I don't want to spend too much time on this explanation, as I hope the code and the comments speak for themselves. I will acknowledge the unfortunate nested for loop in the last chunk. Oh well. Also, the unfortunate combination of reduces and for loops. The kinds of parsing and aggregation I wanted to do didn't all fall into the same paradigm, and I opted for ease of development/understanding rather than consistency of style.
