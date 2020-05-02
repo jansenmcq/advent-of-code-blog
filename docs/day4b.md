@@ -1,0 +1,3 @@
+## Day 4, part 2
+
+This ended up being surprisingly easy. It's the same parsing as part 1, but instead of summing the time each gaurd spend asleep, it's just a matter of building a histogram for each guard. This is quite easy in javascript, using an object to hold all those values for each minute. Then one more iteration over the guards to see which one ends up having the highest frequency of sleep, and it's as good as solved.
