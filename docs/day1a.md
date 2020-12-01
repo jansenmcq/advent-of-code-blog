@@ -9,7 +9,7 @@ The problem in this prompt is pretty straightforward. The [input](https://advent
 I've gotten my inputReaderUtility set up (subjecty to plenty of refinement, I just need a barebones file reader for now).
 With that squared away, my code becomes very straightforward:
    
-    const inputReader = require('./utilities/inputReaderUtility');
+    const inputReader = require('../utilities/inputReaderUtility');
     const inputPath = '../input/1a.txt';
     
     const input = inputReader.getNumbers(inputPath);

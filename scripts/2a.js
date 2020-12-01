@@ -1,4 +1,4 @@
-const inputReader = require('./utilities/inputReaderUtility');
+const inputReader = require('../utilities/inputReaderUtility');
 const inputPath = 'input/2.txt';
 
 const input = inputReader.getLines(inputPath);

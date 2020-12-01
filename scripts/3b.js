@@ -1,5 +1,5 @@
-const inputReader = require('./utilities/inputReaderUtility');
-const timer = require('./utilities/timer');
+const inputReader = require('../utilities/inputReaderUtility');
+const timer = require('../utilities/timer');
 const inputPath = 'input/3.txt';
 
 const input = inputReader.getLines(inputPath);
